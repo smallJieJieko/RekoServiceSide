@@ -18,6 +18,8 @@ import java.util.Map;
 @RequestMapping("/api")
 public class ActivityController {
     @Autowired
+
+
     ActivityRepository activityRepository;
     @Autowired
     ImageService productServiceImp;
