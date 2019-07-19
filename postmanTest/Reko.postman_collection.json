@@ -1,0 +1,607 @@
+{
+	"info": {
+		"_postman_id": "cdb5c606-5870-4766-8f67-83df36745adc",
+		"name": "Reko",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "UserBase",
+			"item": [
+				{
+					"name": "检索所有账户",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8080/api/userbase",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"userbase"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "用户编号编号检索",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8080/api/userbase/ubnumber/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"userbase",
+								"ubnumber",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "账户检索",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8080/api/userbase/account/jieko",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"userbase",
+								"account",
+								"jieko"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "创建新账户(账户重复返回null)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"uBnumber\":1,\n\t\"account\":\"2ko\",\n\t\"passWord\":\"921921\"\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/api/userbase",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"userbase"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "更新账户",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"uBnumber\": 1,\n  \"account\": \"jieko\",\n  \"passWord\": \"921921\"\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/api/userbase/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"userbase",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "删除用户byunumber",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8080/api/userbase/222",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"userbase",
+								"222"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "UserDeatil",
+			"item": [
+				{
+					"name": "检索所有用户信息",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8080/api/userdetail",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"userdetail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "检索单个用户",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8080/api/userdetail/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"userdetail",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "创建新用户",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"uDnumber\":4,\n\t\"birthday\":\"1998-01-01\",\n\t\"sex\":\"boy\",\n\t\"nickName\":\"rek1oo\",\n\t\"portrait\":\"lalala3123laaa\",\n\t\"createANumber\":10,\n\t\"joinANubmber\":20,\n\t\"attentionANumber\":\"1\"\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/api/userdetail",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"userdetail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "删除用户",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8080/api/userdetail/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"userdetail",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "更新单个用户",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"uDnumber\": 2,\n    \"birthday\": \"1998-01-01T00:00:00.000+0000\",\n    \"sex\": \"boy\",\n    \"nickName\": \"rekoooooo\",\n    \"portrait\": \"lalalalaa\",\n    \"createANumber\": 10,\n    \"joinANubmber\": 20\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/api/userdetail/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"userdetail",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "UserPermission",
+			"item": [
+				{
+					"name": "获取全部用户的权限信息",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8080/api/userPermission",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"userPermission"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "查找一个用户的权限信息",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8080/api/userPermission/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"userPermission",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "创建新的用户权限信息",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"uPnumber\":1,\n\t\"changeDetail\":true,\n\t\"createActivity\":true,\n\t\"lookActivity\":true,\n\t\"changeActivity\":true,\n\t\"deleteAchitity\":false,\n\t\"addFriends\":true,\n\t\"lookFriends\":true,\n\t\"deleteFriends\":true,\n\t\"setAdministrator\":false,\n\t\"deleteUser\":false\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/api/userPermission",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"userPermission"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "更新用户的权限信息",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"uPnumber\":1,\n\t\"changeDetail\":true,\n\t\"createActivity\":true,\n\t\"lookActivity\":true,\n\t\"changeActivity\":true,\n\t\"deleteAchitity\":false,\n\t\"addFriends\":true,\n\t\"lookFriends\":true,\n\t\"deleteFriends\":true,\n\t\"setAdministrator\":false,\n\t\"deleteUser\":false\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/api/userPermission",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"userPermission"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "删除用户权限信息",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8080/api/userPermission/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"userPermission",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Activity",
+			"item": [
+				{
+					"name": "检索全部活动",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8080/api/activity",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"activity"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "通过活动号来查询活动",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8080/api/activity/anumber/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"activity",
+								"anumber",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "通过创建者来查询活动",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8080/api/activity/createrNumber/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"activity",
+								"createrNumber",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "创建新活动",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t    \"aNumber\":2,\n        \"createrNumber\":3,\n        \"aName\": \"毕业江聚餐\",\n        \"label1Type\": \"聚餐\",\n        \"label2Site\": \"花江\",\n        \"photograph\": \"hahahhahaa\",\n        \"contentType\": \"毕业聚餐\",\n        \"headcount\": 10,\n        \"activityState\": \"等待\",\n        \"intro\": \"  风吹走了祝福的心絮，雨模煳了期盼的视线，我扎紧了思念的情结，相信总有一天我们会再度重逢！在这毕业之际我在花匠等与君>_<\",\n        \"detail\": \"活动地点，活动注意事项，活动须知......活动流程，活动人员安排，活动经费......详细介绍活动...\",\n        \"memberNumber\": \"1,2,3\",\n        \"startTime\": \"1998-01-01T00:00:00.000+0000\",\n        \"finishTime\": \"2019-06-01T00:00:00.000+0000\"\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/api/activity",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"activity"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "删除活动",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8080/api/activity/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"activity",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "修改活动",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t    \"aNumber\":2,\n        \"createrNumber\":3,\n        \"aName\": \"毕\",\n        \"label1Type\": \"聚餐\",\n        \"label2Site\": \"花江\",\n        \"photograph\": \"hahahhahaa\",\n        \"contentType\": \"毕业聚餐\",\n        \"headcount\": 10,\n        \"activityState\": \"等待\",\n        \"intro\": \"  风吹走了祝福的心絮，雨模煳了期盼的视线，我扎紧了思念的情结，相信总有一天我们会再度重逢！在这毕业之际我在花匠等与君>_<\",\n        \"detail\": \"活动地点，活动注意事项，活动须知......活动流程，活动人员安排，活动经费......详细介绍活动...\",\n        \"memberNumber\": \"1,2,3\",\n        \"startTime\": \"1998-01-01T00:00:00.000+0000\",\n        \"finishTime\": \"2019-06-01T00:00:00.000+0000\"\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/api/activity",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"activity"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
