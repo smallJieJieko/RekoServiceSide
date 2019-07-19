@@ -14,6 +14,7 @@ import java.util.Map;
 @RestController
 @RequestMapping("/api")
 public class ActivityController {
+
     private final
     ActivityRepository activityRepository;
     private final
