@@ -12,19 +12,18 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-/**
- * 响应路径例如：localhost:8080/api/userbase
- */
 @RequestMapping("/api")
 public class ActivityController {
-    @Autowired
-
-
-
-
+    private final
     ActivityRepository activityRepository;
-    @Autowired
+    private final
     ImageService productServiceImp;
+
+    public ActivityController(ActivityRepository activityRepository, ImageService productServiceImp) {
+        this.activityRepository = activityRepository;
+        this.productServiceImp = productServiceImp;
+    }
+
     //查找全部
     @GetMapping("/activity")
     public List<RekoActivity> getAllActivitys(){
