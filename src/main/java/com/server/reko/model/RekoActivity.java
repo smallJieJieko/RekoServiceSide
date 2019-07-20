@@ -25,7 +25,7 @@ public class RekoActivity implements Serializable {
     @Column (nullable = false,length=20)
     private String label2Site;
     //图片
-    @Column (nullable = false,length=255,unique = true)//设定不能为空
+    @Column (nullable = false,length=255)//设定不能为空
     private String photograph;
     //内容类型
     @Column (nullable = false,length=20)

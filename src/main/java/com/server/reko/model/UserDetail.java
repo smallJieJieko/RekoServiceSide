@@ -28,7 +28,7 @@ public class UserDetail  implements Serializable {
     private String nickName;
 
     //头像URL
-    @Column (nullable = true,length=255,unique = true)//设定不能为空
+    @Column (nullable = true,length=255)//设定不能为空
     private String portrait;
 
     //创建活动数

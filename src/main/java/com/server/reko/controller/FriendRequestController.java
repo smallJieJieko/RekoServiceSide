@@ -17,7 +17,7 @@ import java.util.List;
 public class FriendRequestController {
     @Autowired
     FriendRequestRepository friendRequestRepository;
-    //获取全部好友信息
+    //获取全部好友请求信息
     @GetMapping("/friend_request")
     public List<FriendRequest> getAllFriendRequest(){
         return friendRequestRepository.findAll();
@@ -65,6 +65,7 @@ public class FriendRequestController {
         }
         return null;
     }
+    //删除好友请求
     @DeleteMapping("/friend_request/{sender},{geter}")
     public  Boolean deleteFriendRequest(@PathVariable(value = "sender") Long sender,@PathVariable(value = "geter") Long geter){
         if(friendRequestRepository.getFriendRequestBySendApplicationAndGetApplication(sender,geter)!=null)

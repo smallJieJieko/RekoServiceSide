@@ -3,7 +3,6 @@ package com.server.reko.controller;
 import com.server.reko.Service.ImageService;
 import com.server.reko.model.RekoActivity;
 import com.server.reko.repository.ActivityRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
